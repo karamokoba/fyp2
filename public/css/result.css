@@ -1,0 +1,352 @@
+.categories {
+    background-color: white;
+    height: 650px;
+    overflow: hidden;
+    position: relative;
+    width: 1510px;
+  }
+  
+  .categories .group {
+    height: 64px;
+    left: 1216px;
+    position: absolute;
+    top: 64px;
+    width: 64px;
+  }
+  
+  .categories .user-wrapper {
+    background-color: rgb(133, 116, 243);
+    height: 64px;
+    position: relative;
+    right: -125px;
+  }
+  
+  .categories .user {
+    height: 48px;
+    left: 8px;
+    position: absolute;
+    top: 8px;
+    width: 48px;
+  }
+  
+  .categories .frame {
+    align-items: center;
+    background-color: #2173d4;
+    border-radius: 8px;
+    display: inline-flex;
+    gap: 10px;
+    justify-content: center;
+    left: 605px;
+    padding: 16px 64px;
+    position: absolute;
+    top: 817px;
+  }
+  
+  .categories .text-wrapper {
+    color: #ffffff;
+    font-family: "Poppins-Bold", Helvetica;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .categories .div {
+    color: rgb(133, 116, 243);
+    font-family: "Inter-Bold", Helvetica;
+    font-size: 40px;
+    font-weight: 700;
+    left: 353px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 88px;
+    width: 667px;
+  }
+  
+  /* .categories .double-square {
+    height: 379px;
+    left: 1308px;
+    position: absolute;
+    top: -189px;
+    width: 383px;
+  } */
+  
+  /* .categories .overlap-group {
+    height: 379px;
+    position: relative;
+  }
+   */
+  /* .categories .rectangle {
+    background-color: #00000033;
+    height: 325px;
+    left: 0;
+    position: absolute;
+    top: 54px;
+    width: 326px;
+  } */
+  
+  /* .categories .rectangle-2 {
+    background-color: #000000;
+    height: 325px;
+    left: 57px;
+    position: absolute;
+    top: 0;
+    width: 326px;
+  } */
+  
+  /* .categories .circle-with-triangle {
+    height: 402px;
+    left: 1248px;
+    position: absolute;
+    top: 764px;
+    width: 387px;
+  } */
+  
+  /* .categories .overlap {
+    background-color: #000000;
+    border-radius: 191.5px;
+    height: 383px;
+    left: 4px;
+    position: relative;
+    top: 19px;
+    width: 383px;
+  } */
+  
+  .categories .polygon {
+    height: 134px;
+    left: 38px;
+    position: absolute;
+    top: -1px;
+    width: 138px;
+  }
+  
+  /* .categories .overlap-wrapper {
+    height: 379px;
+    left: -192px;
+    position: absolute;
+    top: 835px;
+    transform: rotate(-180deg);
+    width: 383px;
+  } */
+  
+  .categories .overlap-2 {
+    height: 291px;
+    left: -41px;
+    position: absolute;
+    top: -81px;
+    width: 302px;
+  }
+  
+  .categories .triangle-with-circle {
+    height: 291px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 302px;
+  }
+  
+  .categories .overlap-3 {
+    height: 162px;
+    left: 41px;
+    position: relative;
+    top: 81px;
+    width: 261px;
+  }
+  
+  .categories .img {
+    height: 137px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 231px;
+  }
+  
+  /* .categories .ellipse {
+    background-color: #00000038;
+    border-radius: 25px;
+    height: 50px;
+    left: 211px;
+    position: absolute;
+    top: 112px;
+    width: 50px;
+  } */
+  
+  .categories .screenshot {
+    height: 92px;
+    left: 94px;
+    object-fit: cover;
+    position: absolute;
+    top: 101px;
+    width: 104px;
+  }
+  
+  .categories .text-wrapper-2 {
+    color: #000000;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 30px;
+    font-weight: 400;
+    left: 610px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 209px;
+    white-space: nowrap;
+  }
+  
+  .categories .find-your-results {
+    color: transparent;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 40px;
+    font-weight: 400;
+    height: 66px;
+    left: 83px;
+    letter-spacing: 4px;
+    line-height: normal;
+    position: absolute;
+    text-align: justify;
+    top: 370px;
+    width: 589px;
+  }
+  
+  .categories .span {
+    color: #000000;
+  }
+  
+  .categories .text-wrapper-3 {
+    color: #2b1dd4;
+    text-decoration: underline;
+  }
+  
+  .categories .screenshot-2 {
+    height: 144px;
+    left: 83px;
+    object-fit: cover;
+    position: absolute;
+    top: 563px;
+    width: 1282px;
+  }
+  .writing-answers .polygon {
+    /* padding-left: 0px; */
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    top: 0;
+    left: 0;
+}
+/* Styling for the dropdown content */
+#dropdownContent {
+  border-radius: 16px;
+  display: none;
+  position: absolute;
+  top: 102%; /* Position the dropdown below the user icon */
+  left: -36px;
+  background-color: white; /* Background color for the dropdown */
+  border: none; /* Border for the dropdown */
+  padding: 10px; /* Padding for the dropdown content */
+  min-width: 115px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+#dropdownContent a {
+  padding: 8px 16px; /* Adjusted link padding */
+  text-decoration: none;
+  display: block;
+  color: #333;
+  transition: background-color 0.3s; /* Smooth transition for link hover */
+}
+
+#dropdownContent a:hover {
+  background-color: #f2f2f2; /* Background color on hover */
+}
+.footer-basic {
+  padding:12px 0;
+  background-color: black;
+  color:#4b4c4d;
+  height: 20px;
+}
+
+.footer-basic ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+
+.footer-basic li {
+  padding:0 10px;
+}
+
+.footer-basic ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity:1;
+}
+
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+
+.footer-basic .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity:0.9;
+}
+
+.footer-basic .copyright {
+  margin-top:-1px;
+  text-align:center;
+  font-size:18px;
+  color:#aaa;
+  margin-bottom:0;
+}
+
+.logo {
+  height: 20px;
+  width: 20px;
+}
+
+/* Add this to your existing CSS or create a new file and link it */
+
+/* Style for the result table */
+.result-table {
+  width: 80%; /* Adjust the width of the table */
+  border-collapse: collapse; /* Collapse border-spacing and border-collapse properties */
+  margin-top: 300px;
+  margin-left: 150px; /* Adjust margin as needed */
+}
+
+.result-table th, .result-table td {
+  border: 1px solid #000000; /* Add borders to table cells */
+  padding: 8px; /* Add padding to cells */
+  text-align: left;
+}
+
+.result-table th {
+  background-color: #f2f2f2; /* Add background color to header cells */
+}
