@@ -26,7 +26,6 @@ Route::post('/lecturerBarQ/store', [ChartQuestionController::class, 'store'])->n
 
 Route::get('/writingA', [DocumentController::class, 'showQuestions'])->name('lecturerWritingQ.writingA');
 
-// Route::get('/writingA', [DocumentController::class, 'showQuestions'])->name('lecturerWritingQ.writingA');
 Route::post('/writingA', [DocumentController::class, 'storeAnswer'])->name('writingA.store');
 
 Route::get('/graphAnswers', [ChartQuestionController::class, 'showQuestions'])->name('lecturerBarQ.graphAnswers');
@@ -81,13 +80,11 @@ Route::get('/logout', function () {
     return view('logout');
 });
 
-Route::get('/result', function () {
-    return view('result');
-});
+Route::get('/result', [DocumentController::class, 'showResults'])->name('result');
 
-Route::get('/resultLecturer', function () {
-    return view('resultLecturer');
-});
+
+Route::get('/resultLecturer', [DocumentController::class, 'showAnswers'])->name('resultLecturer');
+Route::post('/resultLecturer/submit', [DocumentController::class, 'submitResults'])->name('submitResults');
 
 Route::get('/login', function () {
     return view('login');

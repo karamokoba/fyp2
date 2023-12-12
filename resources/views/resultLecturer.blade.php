@@ -58,49 +58,52 @@
         
         <!-- Three boxes aligned horizontally -->
         <div class="box-container">
-            <div class="grade-box">
-                <h3>Writing</h3>
-                <!-- Textarea to display the text for Writing -->
-                <textarea readonly class="text-to-mark"></textarea>
-                <form>
-                    @csrf
-                    <label for="mark1">Mark:</label>
-                    <input type="number" name="mark1" required>
-                    <label for="comments1">Comments:</label>
-                    <input type="text" name="comments1" required>
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
+        <!-- Writing Section -->
+        <div class="grade-box">
+            <h3>Writing</h3>
+            <textarea readonly class="text-to-mark">{{ $writingAnswer ? $writingAnswer->answers : '' }}</textarea>
+        </div>
 
-            <div class="grade-box">
-                <h3>Reading</h3>
-                <!-- Textarea to display the text for Reading -->
-                <textarea readonly class="text-to-mark"></textarea>
-                <form>
-                    @csrf
-                    <label for="mark2">Mark:</label>
-                    <input type="number" name="mark2" required>
-                    <label for="comments2">Comments:</label>
-                    <input type="text" name="comments2" required>
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
+        <!-- Reading Section -->
+        <div class="grade-box">
+            <h3>Reading</h3>
+            <textarea readonly class="text-to-mark">{{ $readingAnswer ? $readingAnswer->answers : '' }}</textarea>
+        </div>
 
-            <div class="grade-box">
-                <h3>Graph</h3>
-                <!-- Textarea to display the text for Graph -->
-                <textarea readonly class="text-to-mark"></textarea>
-                <form>
-                    @csrf
-                    <label for="mark3">Mark:</label>
-                    <input type="number" name="mark3" required>
-                    <label for="comments3">Comments:</label>
-                    <input type="text" name="comments3" required>
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
+        <!-- Graph Section -->
+        <div class="grade-box">
+            <h3>Graph</h3>
+            <textarea readonly class="text-to-mark">{{ $graphAnswer ? $graphAnswer->answers : '' }}</textarea>
         </div>
     </div>
+
+    <div class="gradeForm">
+        <form method="post" action="{{ route('submitResults') }}">
+            @csrf
+
+            <label for="writing_mark">Writing Mark:</label>
+            <input type="number" id="writing_mark" name="writing_mark" required>
+
+            <label for="writing_comment">Writing Comment:</label>
+            <input type="text" id="writing_comment" name="writing_comment" required>
+
+            <label for="reading_mark">Reading Mark:</label>
+            <input type="number" id="reading_mark" name="reading_mark" required>
+
+            <label for="reading_comment">Reading Comment:</label>
+            <input type="text" id="reading_comment" name="reading_comment" required>
+
+            <label for="graph_mark">Graph Mark:</label>
+            <input type="number" id="graph_mark" name="graph_mark" required>
+
+            <label for="graph_comment">Graph Comment:</label>
+            <input type="text" id="graph_comment" name="graph_comment" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+
 
     <div class="footer-basic">
         <footer>

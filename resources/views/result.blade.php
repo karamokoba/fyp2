@@ -56,29 +56,29 @@
 
         <!-- Table with 4 columns and 3 rows -->
         <table class="result-table">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Writing</th>
-                    <th>Reading</th>
-                    <th>Graph</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Mark</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Comments</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
+    <thead>
+        <tr>
+            <th></th>
+            <th>Writing</th>
+            <th>Reading</th>
+            <th>Graph</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Mark</td>
+            <td>{{ $examResults ? $examResults->writing_mark : '' }}</td>
+            <td>{{ $examResults ? $examResults->reading_mark : '' }}</td>
+            <td>{{ $examResults ? $examResults->graph_mark : '' }}</td>
+        </tr>
+        <tr>
+            <td>Comments</td>
+            <td>{{ $examResults ? $examResults->writing_comment : '' }}</td>
+            <td>{{ $examResults ? $examResults->reading_comment : '' }}</td>
+            <td>{{ $examResults ? $examResults->graph_comment : '' }}</td>
+        </tr>
+    </tbody>
+</table>
     </div>
     <div class="footer-basic">
         <footer>

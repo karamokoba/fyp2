@@ -1,6 +1,6 @@
 .categories {
     background-color: white;
-    height: 970px;
+    height: 1320px;
     overflow: hidden;
     position: relative;
     width: 1510px;
@@ -270,6 +270,7 @@
   background-color: black;
   color:#4b4c4d;
   height: 20px;
+  margin-top: 23px 
 }
 
 .footer-basic ul {
@@ -377,16 +378,51 @@
   border: 1px solid #ccc;
 }
 
-.grade-box button {
+.submitGrades {
   background-color: rgb(133, 116, 243);
-  color: white;
-  padding: 10px 15px; /* Adjust padding for larger button */
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  width: 100%;
+  border-radius: 15px;
+  height: 50px;
+  width: 97%;
+  margin-top: 252px;
+  margin-left: 30px;
+  margin-right: 30px;
+  /* margin-top: 30px; */
 }
 
-.grade-box button:hover {
-  background-color: #45a049;
+.gradeForm {
+  margin-top: 130px;
+}
+
+form {
+  max-width: 100%;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: rgb(133, 116, 243);
+  border: none;
+  border-radius: 15px;
+  height: 50px;
+  width: 100%;
+  /* margin-top: 252px; */
+  /* margin-left: 30px;
+  margin-right: 30px; */
+} 
+
+button:hover {
+  background-color: hsl(238, 40%, 45%);
 }
