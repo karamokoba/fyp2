@@ -73,7 +73,7 @@
                         <label for="marks">Marks:</label>
                         <input type="number" name="marks" required>
                         <br>
-                        <button type="submit">Submit</button>
+                        <button type="submit" onclick="submitForm()" class="submitButton">Upload</button>
                     </form>
                 </div>
             </div>
@@ -112,5 +112,19 @@ function displaySelectedFile() {
       } else {
         selectedFile.innerHTML = 'No file selected';
       }
+    }
+
+    function submitForm() {
+        // Disable the submit button to prevent multiple clicks
+        document.querySelector('.submitButton').disabled = true;
+
+        // Submit the form
+        document.forms[0].submit();
+
+        // Display the success alert
+        setTimeout(function () {
+            alert('Question Successfully Uploaded. Click OK to go back.');
+            window.location.href = '/lecturerCategories'; // Redirect to the desired page
+        }, 500); // Introduce a small delay to allow the form submission to complete
     }
 </script>

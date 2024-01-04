@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="{{ asset('css/writingA.css') }}"/>
     </head>
     <body>
+    <!-- <div id="timer"></div> -->
         <div class="writing-answers">
             <div class="overlap-wrapper">
                 <div class="overlap">
@@ -49,7 +50,8 @@
                                 @csrf
                                 <textarea name="answers" class="frame" cols="30" rows="10" placeholder="Write your answer here..."></textarea>
                                 <br>
-                                <button type="submit" class="submitButton">Submit Answer</button>
+                                <button type="submit" onclick="submitForm()" class="submitButton">Submit Answer</button>
+                                <div id="timer"></div>
                             </form>
                             <!-- <div class="frame"><div class="text-wrapper-2">Text.......</div></div> -->
                         </div>
@@ -65,12 +67,6 @@
                                 <img class="screenshot" src="images/logo-remove.png" />
                             </div>
                         </div>
-                        <!-- <div class="frame-wrapper">
-                            <div class="div-wrapper"><div class="text-wrapper-3">Submit</div></div>
-                        </div>
-                        <div class="frame-2">
-                            <a href="/examCategories"><div class="div-wrapper"><div class="text-wrapper-3">Back</div></div></a>
-                        </div> -->
                     </div>
                     <div class="text-wrapper-4">IIUM Placement Test Scheduling</div>
                     <div class="overlap-group-wrapper">
@@ -106,4 +102,50 @@ $(document).ready(function() {
         }
     });
 });
+
+    function submitForm() {
+        // Disable the submit button to prevent multiple clicks
+        document.querySelector('.submitButton').disabled = true;
+
+        // Submit the form
+        document.forms[0].submit();
+
+        // Display the success alert
+        setTimeout(function () {
+            alert('Answer Successfully Submitted. Click OK to go back.');
+            window.location.href = '/examCategories'; // Redirect to the desired page
+        }, 500); // Introduce a small delay to allow the form submission to complete
+    }
+
+    // Function to update and display the timer
+    function updateTimer(remainingTime) {
+        const minutes = Math.floor(remainingTime / 60000);
+        const seconds = Math.floor((remainingTime % 60000) / 1000);
+        document.getElementById('timer').innerText = `Time remaining: ${minutes}m ${seconds}s`;
+    }
+
+    // Set the timer for 1h30
+    window.onload = function() {
+        let remainingTime = 3600000; // 1 hour 30 minutes = 5400000 milliseconds
+
+        // Display the initial timer
+        updateTimer(remainingTime);
+
+        // Update and display the timer every second
+        const timerInterval = setInterval(function() {
+            remainingTime -= 1000; // Subtract 1 second
+
+            // Update and display the timer
+            updateTimer(remainingTime);
+
+            // Check if the time is up
+            if (remainingTime <= 0) {
+                // Call the submitForm function when the time is up
+                submitForm();
+
+                // Clear the interval to stop the timer
+                clearInterval(timerInterval);
+            }
+        }, 1000);
+    };
 </script>

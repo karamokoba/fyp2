@@ -62,7 +62,8 @@
                                 @csrf
                                 <textarea name="answers" class="reading-text" cols="30" rows="10" placeholder="Write your answer here..."></textarea>
                                 <br>
-                                <button type="submit" class="submitButton">Submit Answer</button>
+                                <button type="submit" onclick="submitForm()" class="submitButton">Submit Answer</button>
+                                <div id="timer"></div>
                             </form>
                         </div>
                         <div class="double-square">
@@ -112,4 +113,39 @@ $(document).ready(function() {
         }
     });
 });
+
+    function submitForm() {
+        document.querySelector('.submitButton').disabled = true;
+        // Submit the form
+        document.forms[0].submit();
+
+        // Display the success alert
+        setTimeout(function () {
+            alert('Answer Successfully Submitted. Click OK to go back.');
+            window.location.href = '/examCategories'; // Redirect to the desired page
+        }, 500);
+    }
+
+    function updateTimer(remainingTime) {
+        const minutes = Math.floor(remainingTime / 60000);
+        const seconds = Math.floor((remainingTime % 60000) / 1000);
+        document.getElementById('timer').innerText = `Time remaining: ${minutes}m ${seconds}s`;
+    }
+
+    window.onload = function() {
+        let remainingTime = 3600000; // 1 hour = 3600000 milliseconds
+
+        updateTimer(remainingTime);
+
+        const timerInterval = setInterval(function() {
+            remainingTime -= 1000;
+
+            updateTimer(remainingTime);
+
+            if (remainingTime <= 0) {
+                clearInterval(timerInterval);
+                submitForm(); // Automatically submit the form when the time is up
+            }
+        }, 1000);
+    };
 </script>

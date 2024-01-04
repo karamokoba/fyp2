@@ -379,3 +379,10 @@ textarea[placeholder] {
     border-radius: 15px;
     background: rgb(133, 116, 243);
 }
+
+#timer {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+    padding-left: 491px;
+}

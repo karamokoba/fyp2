@@ -99,7 +99,7 @@
             <label for="graph_comment">Graph Comment:</label>
             <input type="text" id="graph_comment" name="graph_comment" required>
 
-            <button type="submit">Submit</button>
+            <button type="submit"onclick="submitForm()" class="submitButton">Submit</button>
         </form>
     </div>
 
@@ -130,4 +130,17 @@ $(document).ready(function() {
         }
     });
 });
+function submitForm() {
+        // Disable the submit button to prevent multiple clicks
+        document.querySelector('.submitButton').disabled = true;
+
+        // Submit the form
+        document.forms[0].submit();
+
+        // Display the success alert
+        setTimeout(function () {
+            alert('Marks Successfully Submitted. Click OK to go back.');
+            window.location.href = '/lecturerCategories'; // Redirect to the desired page
+        }, 500); // Introduce a small delay to allow the form submission to complete
+    }
 </script>
